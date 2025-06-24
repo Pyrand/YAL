@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Anime SPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="logo">MiniAnimeList</h1>
+        <nav>
+            <ul>
+                <li><a href="#" data-page="home">Home</a></li>
+                <li><a href="#" data-page="search">Search</a></li>
+                <li><a href="#" data-page="season">Season</a></li>
+                <li><a href="#" data-page="random">Random</a></li>
+                <li><a href="#" data-page="mylist">My List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="content">
+        <section id="home" class="page">
+            <div class="hero">
+                <h2>Welcome to MiniAnimeList</h2>
+                <p>Your personal anime tracker and discovery tool.</p>
+                <button id="toSearch" data-page="search">Start Exploring</button>
+            </div>
+        </section>
+
+        <section id="search" class="page" hidden>
+            <h2>Search Anime</h2>
+            <input type="text" id="searchQuery" placeholder="Search for anime">
+            <button id="searchBtn">Search</button>
+            <div id="searchResults"></div>
+        </section>
+
+
+        <section id="season" class="page" hidden>
+            <h2>Seasonal Anime</h2>
+            <select id="seasonSelect">
+                <option value="winter">Winter</option>
+                <option value="spring">Spring</option>
+                <option value="summer">Summer</option>
+                <option value="fall">Fall</option>
+            </select>
+            <input type="number" id="seasonYear" placeholder="Year" min="1980" max="2100" value="2024">
+            <button id="seasonBtn">Load</button>
+            <div id="seasonResults"></div>
+        </section>
+        <section id="random" class="page" hidden>
+            <h2>Random Anime</h2>
+            <button id="randomBtn">Get Random Anime</button>
+            <div id="randomResult"></div>
+        </section>
+
+        <section id="mylist" class="page" hidden>
+            <h2>My Anime List</h2>
+            <div id="auth"></div>
+            <div id="userList"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 MiniAnimeList</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
