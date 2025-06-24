@@ -2,6 +2,7 @@ const pages = document.querySelectorAll('.page');
 const navLinks = document.querySelectorAll('nav a');
 const toSearchBtn = document.getElementById('toSearch');
 
+
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -9,6 +10,7 @@ navLinks.forEach(link => {
         showPage(page);
     });
 });
+
 
 if (toSearchBtn) {
     toSearchBtn.addEventListener('click', () => showPage('search'));

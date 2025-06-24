@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <h1 id="logo">MiniAnimeList</h1>
         <nav>
@@ -27,6 +28,19 @@
                 <button id="toSearch" data-page="search">Start Exploring</button>
             </div>
         </section>
+
+    <nav>
+        <ul>
+            <li><a href="#" data-page="home">Home</a></li>
+            <li><a href="#" data-page="search">Search</a></li>
+            <li><a href="#" data-page="season">Season</a></li>
+            <li><a href="#" data-page="random">Random</a></li>
+            <li><a href="#" data-page="mylist">My List</a></li>
+        </ul>
+    </nav>
+    <main id="content">
+        <section id="home" class="page">Welcome to the Anime SPA!</section>
+
 
         <section id="search" class="page" hidden>
             <h2>Search Anime</h2>
@@ -60,9 +74,11 @@
             <div id="userList"></div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2025 MiniAnimeList</p>
     </footer>
+
 
     <script src="script.js"></script>
 </body>
